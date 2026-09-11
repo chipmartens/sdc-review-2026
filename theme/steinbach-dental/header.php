@@ -7,6 +7,7 @@
 <meta name="robots" content="noindex, nofollow">
 <link rel="icon" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/icon-160.png" type="image/png">
 <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/fonts/fonts.css">
+<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/site.css?v=20260911b">
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
