@@ -75,7 +75,7 @@
     <h2>Three dentists trained in orthodontics</h2>
     <div class="cards three" style="margin-top:2rem">
       <div class="card reveal" x-data x-intersect.once="$el.classList.add('in')">
-        <div class="mono-tile"><span>KF</span></div>
+        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/dr-friesen.jpg" alt="Dr. Kevin Friesen" width="800" height="800">
         <div class="body">
           <h3>Dr. Kevin Friesen</h3>
           <p class="role">Functional and myofunctional orthodontics, TMJ</p>
@@ -83,7 +83,7 @@
         </div>
       </div>
       <div class="card reveal" x-data x-intersect.once="$el.classList.add('in')">
-        <div class="mono-tile"><span>BC</span></div>
+        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/dr-cypurda.jpg" alt="Dr. Bruce Cypurda" width="800" height="800">
         <div class="body">
           <h3>Dr. Bruce Cypurda</h3>
           <p class="role">Orthodontics</p>
@@ -91,7 +91,7 @@
         </div>
       </div>
       <div class="card reveal" x-data x-intersect.once="$el.classList.add('in')">
-        <div class="mono-tile"><span>CC</span></div>
+        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/dr-carroll.jpg" alt="Dr. Catherine Carroll" width="800" height="800">
         <div class="body">
           <h3>Dr. Catherine Carroll</h3>
           <p class="role">Early interceptive and myofunctional orthodontics</p>

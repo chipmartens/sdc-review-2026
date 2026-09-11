@@ -23,7 +23,7 @@
     <h2>The dentists</h2>
     <div class="cards" style="margin-top:2rem">
       <div class="card reveal" x-data x-intersect.once="$el.classList.add('in')">
-        <div class="mono-tile"><span>KF</span></div>
+        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/dr-friesen.jpg" alt="Dr. Kevin Friesen" width="800" height="800">
         <div class="body">
           <h3>Dr. Kevin Friesen</h3>
           <p class="role">Functional orthodontics, TMJ</p>
@@ -31,7 +31,7 @@
         </div>
       </div>
       <div class="card reveal" x-data x-intersect.once="$el.classList.add('in')">
-        <div class="mono-tile"><span>BC</span></div>
+        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/dr-cypurda.jpg" alt="Dr. Bruce Cypurda" width="800" height="800">
         <div class="body">
           <h3>Dr. Bruce Cypurda</h3>
           <p class="role">Orthodontics</p>
@@ -39,7 +39,7 @@
         </div>
       </div>
       <div class="card reveal" x-data x-intersect.once="$el.classList.add('in')">
-        <div class="mono-tile"><span>CC</span></div>
+        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/dr-carroll.jpg" alt="Dr. Catherine Carroll" width="800" height="800">
         <div class="body">
           <h3>Dr. Catherine Carroll</h3>
           <p class="role">Preventative and restorative care</p>
@@ -47,7 +47,7 @@
         </div>
       </div>
       <div class="card reveal" x-data x-intersect.once="$el.classList.add('in')">
-        <div class="mono-tile"><span>SH</span></div>
+        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/dr-hover.jpg" alt="Dr. Shayne Hover" width="800" height="800">
         <div class="body">
           <h3>Dr. Shayne Hover</h3>
           <p class="role">General dentistry</p>
@@ -55,7 +55,7 @@
         </div>
       </div>
       <div class="card reveal" x-data x-intersect.once="$el.classList.add('in')">
-        <div class="mono-tile"><span>WH</span></div>
+        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/dr-herrador.jpg" alt="Dr. Walter Herrador" width="800" height="800">
         <div class="body">
           <h3>Dr. Walter Herrador</h3>
           <p class="role">Implants and oral surgery</p>
@@ -63,7 +63,7 @@
         </div>
       </div>
       <div class="card reveal" x-data x-intersect.once="$el.classList.add('in')">
-        <div class="mono-tile"><span>AP</span></div>
+        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/dr-pham.jpg" alt="Dr. Annie Pham" width="800" height="800">
         <div class="body">
           <h3>Dr. Annie Pham</h3>
           <p class="role">General dentistry</p>
@@ -71,7 +71,7 @@
         </div>
       </div>
       <div class="card reveal" x-data x-intersect.once="$el.classList.add('in')">
-        <div class="mono-tile"><span>UE</span></div>
+        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/dr-eregie.jpg" alt="Dr. Uyiosa Eregie" width="800" height="800">
         <div class="body">
           <h3>Dr. Uyiosa Eregie</h3>
           <p class="role">General dentistry</p>
@@ -79,7 +79,7 @@
         </div>
       </div>
       <div class="card reveal" x-data x-intersect.once="$el.classList.add('in')">
-        <div class="mono-tile"><span>YE</span></div>
+        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/dr-elawah.jpg" alt="Dr. Youssef Elawah" width="800" height="800">
         <div class="body">
           <h3>Dr. Youssef Elawah</h3>
           <p class="role">General dentistry</p>
