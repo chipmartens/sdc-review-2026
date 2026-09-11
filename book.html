@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Book online | Steinbach Dental Clinic</title>
+<meta name="description" content="Request a visit online. Pick who's coming and when suits you, we'll confirm by phone or text.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="assets/img/icon-160.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Hanken+Grotesk:wght@400..700&family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/brand.css">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+<a class="sr-only" href="#main">Skip to content</a>
+<header class="topbar">
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="Steinbach Dental Clinic home">
+      <img class="lockup" src="assets/img/lockup-light.png" alt="Steinbach Dental Clinic" width="220" height="44">
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="services.html">Services</a>
+      <a href="orthodontics.html">Orthodontics</a>
+      <a href="new-patients.html">New patients</a>
+      <a href="team.html">Our dentists</a>
+      <a href="about.html">Our story</a>
+      <a href="emergency.html" class="nav-em">Emergency</a>
+    </nav>
+    <div class="actions">
+      <a class="phone" href="tel:+12043266494">(204) 326-6494</a>
+      <a class="btn btn-primary" href="book.html">Book online</a>
+      <button class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<section class="page-head">
+  <div class="wrap">
+    <h1>Book a visit.</h1>
+    <p class="lead">Pick who's coming and when suits you. We'll call or text to confirm your time.</p>
+    <div class="notice">
+      <p>In pain right now? Don't fill this in, call <a href="tel:+12043266494">(204) 326-6494</a> and we'll do everything we can to see you today.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section tight">
+  <div class="wrap cols">
+    <form id="book-form" class="form reveal" novalidate>
+      <div class="field">
+        <label for="name">Your name</label>
+        <input type="text" id="name" name="name" placeholder="First and last name" required>
+      </div>
+
+      <div class="two">
+        <div class="field">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone">
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email">
+          <span class="help">For the confirmation only</span>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Who is the visit for?</label>
+        <div class="chips">
+          <label class="chip"><input type="checkbox" name="who" value="Me"><span>Me</span></label>
+          <label class="chip"><input type="checkbox" name="who" value="My child"><span>My child</span></label>
+          <label class="chip"><input type="checkbox" name="who" value="My partner"><span>My partner</span></label>
+          <label class="chip"><input type="checkbox" name="who" value="A parent"><span>A parent</span></label>
+          <label class="chip"><input type="checkbox" name="who" value="The whole family"><span>The whole family</span></label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>New patient?</label>
+        <div class="chips">
+          <label class="chip"><input type="radio" name="new-patient" value="Yes, first visit"><span>Yes, first visit</span></label>
+          <label class="chip"><input type="radio" name="new-patient" value="No, I've been before"><span>No, I've been before</span></label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="about">What's it about?</label>
+        <select id="about" name="about">
+          <option>Checkup and cleaning</option>
+          <option>Something hurts</option>
+          <option>Braces or aligners consultation</option>
+          <option>Implant or denture consultation</option>
+          <option>Crown, filling, or a broken tooth</option>
+          <option>Kids' first visit</option>
+          <option>Not sure yet</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label>Days that work</label>
+        <div class="chips">
+          <label class="chip"><input type="checkbox" name="days" value="Mon"><span>Mon</span></label>
+          <label class="chip"><input type="checkbox" name="days" value="Tue"><span>Tue</span></label>
+          <label class="chip"><input type="checkbox" name="days" value="Wed"><span>Wed</span></label>
+          <label class="chip"><input type="checkbox" name="days" value="Thu"><span>Thu</span></label>
+          <label class="chip"><input type="checkbox" name="days" value="Fri"><span>Fri</span></label>
+          <label class="chip"><input type="checkbox" name="days" value="Sat"><span>Sat</span></label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Time of day</label>
+        <div class="chips">
+          <label class="chip"><input type="radio" name="time-of-day" value="Morning"><span>Morning</span></label>
+          <label class="chip"><input type="radio" name="time-of-day" value="Afternoon"><span>Afternoon</span></label>
+          <label class="chip"><input type="radio" name="time-of-day" value="Either"><span>Either</span></label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="notes">Anything we should know?</label>
+        <textarea id="notes" name="notes" rows="4"></textarea>
+        <span class="help">Nervous? Insurance questions? Tell us here.</span>
+      </div>
+
+      <button class="btn btn-primary btn-lg" type="submit">Request a visit</button>
+      <p class="small">No account needed. We only use these details to book and confirm your visit.</p>
+    </form>
+
+    <div id="book-ok" class="notice" hidden>
+      <h3>Thanks, <span data-name>there</span>. We've got it.</h3>
+      <p>Someone from the desk will call or text to confirm your time. If it's urgent, call <a href="tel:+12043266494">(204) 326-6494</a>.</p>
+    </div>
+
+    <div class="reveal">
+      <h3>Prefer to call?</h3>
+      <p><a class="big-phone" href="tel:+12043266494">(204) 326-6494</a></p>
+
+      <h3>Hours</h3>
+      <ul>
+        <li>Mon to Fri 8:00 to 5:00</li>
+        <li>Saturday 8:00 to 4:00</li>
+        <li>Sunday closed</li>
+      </ul>
+
+      <h3>Where</h3>
+      <p>462 Main Street, Steinbach, MB R5G 1Z5</p>
+      <p><a class="link-arrow" href="https://maps.google.com/?q=462+Main+Street+Steinbach+MB">Directions</a></p>
+
+      <div class="callout olive" style="margin-top:1.5rem">
+        <p>New here? Read what the first visit looks like. <a class="link-arrow" href="new-patients.html">See what to expect</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <a class="logo" href="index.html" aria-label="Steinbach Dental Clinic home">
+          <img class="lockup" src="assets/img/lockup-dark.png" alt="Steinbach Dental Clinic" width="220" height="44">
+        </a>
+        <p class="tag">Every smile has a story. We're here for yours.</p>
+        <p class="small">462 Main Street<br>Steinbach, MB R5G 1Z5<br><a href="https://maps.google.com/?q=462+Main+Street+Steinbach+MB">Directions</a></p>
+      </div>
+      <div>
+        <h4>Hours</h4>
+        <ul class="hours">
+          <li><span>Mon to Fri</span><span>8:00 to 5:00</span></li>
+          <li><span>Saturday</span><span>8:00 to 4:00</span></li>
+          <li><span>Sunday</span><span>Closed</span></li>
+        </ul>
+        <p class="small" style="margin-top:.9rem">In pain? Call <a href="tel:+12043266494">(204) 326-6494</a>. Same-day care when it can't wait.</p>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="orthodontics.html">Orthodontics</a></li>
+          <li><a href="new-patients.html">New patients</a></li>
+          <li><a href="team.html">Our dentists</a></li>
+          <li><a href="about.html">Our story</a></li>
+          <li><a href="emergency.html">Emergency</a></li>
+          <li><a href="book.html">Book online</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Reach us</h4>
+        <ul>
+          <li><a href="tel:+12043266494">(204) 326-6494</a></li>
+          <li><a href="mailto:info@steinbachdentalclinic.com">info@steinbachdentalclinic.com</a></li>
+          <li>Fax (204) 326-6806</li>
+          <li><a href="https://www.instagram.com/steinbach.dental.clinic/">Instagram</a></li>
+          <li><a href="https://www.facebook.com/SteinbachDentalClinic">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <span>&copy; 2026 Steinbach Dental Clinic. Members of the Manitoba Dental Association and the Canadian Dental Association.</span>
+      <span><a href="https://steinbachdentalclinic.com/privacy-policy/">Privacy policy</a></span>
+    </div>
+  </div>
+</footer>
+<script src="assets/js/site.js"></script>
+</body>
+</html>
