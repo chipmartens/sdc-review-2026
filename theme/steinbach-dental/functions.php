@@ -37,8 +37,9 @@ function sdc_nav_fallback() {
 // Real booking form when WPForms is active (set the form id in sdc_wpforms_id),
 // otherwise the same static/Alpine mock form the static export ships.
 function sdc_booking_form() {
-    if ( shortcode_exists( 'wpforms' ) ) {
-        echo do_shortcode( '[wpforms id="' . get_option( 'sdc_wpforms_id', 1 ) . '"]' );
+    $form_id = (int) get_option( 'sdc_wpforms_id', 0 );
+    if ( $form_id && shortcode_exists( 'wpforms' ) && 'wpforms' === get_post_type( $form_id ) ) {
+        echo do_shortcode( '[wpforms id="' . $form_id . '"]' );
         return;
     }
     ?>

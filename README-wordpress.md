@@ -34,7 +34,7 @@ To wire up a real form:
 1. Install and activate WPForms (Lite is enough).
 2. Build a form with the fields on the book page (name, phone, email, who the visit is for, new patient, reason, days, time of day, notes).
 3. Note the form's ID (shown in the WPForms admin list, or in the shortcode WPForms gives you).
-4. Set it as an option: `update_option('sdc_wpforms_id', <id>);` (via WP-CLI, a snippet, or `wp option update sdc_wpforms_id <id>`), or just hardcode it by editing the `get_option('sdc_wpforms_id', 1)` default in `functions.php`.
+4. Set it as an option: `update_option('sdc_wpforms_id (set it to the WPForms form ID once the form exists; until then the built-in request form shows)', <id>);` (via WP-CLI, a snippet, or `wp option update sdc_wpforms_id <id>`), or just hardcode it by editing the `get_option('sdc_wpforms_id', 1)` default in `functions.php`.
 
 ## Try it in WordPress Playground
 
