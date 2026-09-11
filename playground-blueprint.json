@@ -1,0 +1,34 @@
+{
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "landingPage": "/",
+  "preferredVersions": {
+    "php": "8.0",
+    "wp": "latest"
+  },
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginZipFile": {
+        "resource": "wordpress.org/plugins",
+        "slug": "wpforms-lite"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "installTheme",
+      "themeZipFile": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/chipmartens/sdc-review-2026/main/theme/steinbach-dental.zip"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php\nrequire '/wordpress/wp-load.php';\n\n$pages = array(\n  array('title' => 'Home', 'slug' => 'home', 'template' => 'front-page.php'),\n  array('title' => 'Services', 'slug' => 'services', 'template' => 'page-services.php'),\n  array('title' => 'Orthodontics', 'slug' => 'orthodontics', 'template' => 'page-orthodontics.php'),\n  array('title' => 'New Patients', 'slug' => 'new-patients', 'template' => 'page-new-patients.php'),\n  array('title' => 'Team', 'slug' => 'team', 'template' => 'page-team.php'),\n  array('title' => 'About', 'slug' => 'about', 'template' => 'page-about.php'),\n  array('title' => 'Emergency', 'slug' => 'emergency', 'template' => 'page-emergency.php'),\n  array('title' => 'Book', 'slug' => 'book', 'template' => 'page-book.php'),\n);\n\n$home_id = 0;\nforeach ($pages as $p) {\n  $id = wp_insert_post(array(\n    'post_title'   => $p['title'],\n    'post_name'    => $p['slug'],\n    'post_status'  => 'publish',\n    'post_type'    => 'page',\n    'post_content' => '',\n  ));\n  if (!is_wp_error($id) && $p['template'] !== 'front-page.php') {\n    update_post_meta($id, '_wp_page_template', $p['template']);\n  }\n  if ($p['slug'] === 'home') {\n    $home_id = $id;\n  }\n}\n\nupdate_option('show_on_front', 'page');\nupdate_option('page_on_front', $home_id);\nupdate_option('permalink_structure', '/%postname%/');\nflush_rewrite_rules();\n"
+    }
+  ]
+}

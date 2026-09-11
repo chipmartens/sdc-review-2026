@@ -1,52 +1,15 @@
-<!doctype html>
-<html lang="en-CA">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>New patients | Steinbach Dental Clinic</title>
-<meta name="description" content="New to Steinbach or coming back after a while? Here's how your first visit goes, what to bring, and what it costs before you commit.">
-<meta name="robots" content="noindex, nofollow">
-<link rel="icon" href="assets/img/icon-160.png" type="image/png">
-<link rel="stylesheet" href="assets/fonts/fonts.css">
-<link rel="stylesheet" href="assets/css/site.css">
-<script src="assets/js/alpine-intersect.min.js" defer></script>
-<script src="assets/js/alpine.min.js" defer></script>
-</head>
-<body>
-<a class="sr-only" href="#main">Skip to content</a>
-<header class="topbar" x-data="{open:false}">
-  <div class="wrap">
-    <a class="logo" href="index.html" aria-label="Steinbach Dental Clinic home">
-      <img class="lockup" src="assets/img/lockup-light.png" alt="Steinbach Dental Clinic" width="220" height="44">
-    </a>
-    <nav class="nav" aria-label="Main" :class="{open:open}">
-      <a href="services.html">Services</a>
-      <a href="orthodontics.html">Orthodontics</a>
-      <a href="new-patients.html" aria-current="page">New patients</a>
-      <a href="team.html">Our dentists</a>
-      <a href="about.html">Our story</a>
-      <a href="emergency.html" class="nav-em">Emergency</a>
-    </nav>
-    <div class="actions">
-      <a class="phone" href="tel:+12043266494">(204) 326-6494</a>
-      <a class="btn btn-primary" href="book.html">Book online</a>
-      <button class="menu-btn" x-on:click="open=!open" :aria-expanded="open" x-text="open ? 'Close' : 'Menu'" aria-controls="nav">Menu</button>
-    </div>
-  </div>
-</header>
-
-<main id="main">
+<?php /* Template Name: New Patients */ get_header(); ?>
 <section class="page-head with-img">
   <div class="wrap grid">
     <div>
       <h1>New to town? You have a dentist now.</h1>
       <p class="lead">Here's how the first visit goes, what to bring, and what it costs before you commit.</p>
       <div class="cta">
-        <a class="btn btn-primary btn-lg" href="book.html">Book online</a>
+        <a class="btn btn-primary btn-lg" href="<?php echo esc_url( home_url( '/book/' ) ); ?>">Book online</a>
         <a class="btn btn-ghost btn-lg" href="tel:+12043266494">Call (204) 326-6494</a>
       </div>
     </div>
-    <img src="assets/img/reception.jpg" alt="The front desk at Steinbach Dental Clinic">
+    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/reception.jpg" alt="The front desk at Steinbach Dental Clinic">
   </div>
 </section>
 
@@ -85,7 +48,7 @@
 <section class="section" id="nervous">
   <div class="wrap split">
     <div class="sticky reveal" x-data x-intersect.once="$el.classList.add('in')">
-      <img src="assets/img/dr-eregie.jpg" alt="Dr. Uyiosa Eregie">
+      <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/dr-eregie.jpg" alt="Dr. Uyiosa Eregie">
     </div>
     <div>
       <h2>It's been a while? That's fine.</h2>
@@ -156,61 +119,10 @@
   <div class="wrap grid">
     <h2>Ready when you are. Saturdays too.</h2>
     <div class="cta" style="display:flex;gap:.9rem;flex-wrap:wrap">
-      <a class="btn btn-primary btn-lg" href="book.html">Book online</a>
+      <a class="btn btn-primary btn-lg" href="<?php echo esc_url( home_url( '/book/' ) ); ?>">Book online</a>
       <a class="btn btn-ghost btn-lg" href="tel:+12043266494">Call (204) 326-6494</a>
     </div>
   </div>
 </section>
 
-</main>
-
-<footer class="footer">
-  <div class="wrap">
-    <div class="grid">
-      <div>
-        <a class="logo" href="index.html" aria-label="Steinbach Dental Clinic home">
-          <img class="lockup" src="assets/img/lockup-dark.png" alt="Steinbach Dental Clinic" width="220" height="44">
-        </a>
-        <p class="tag">Every smile has a story. We're here for yours.</p>
-        <p class="small">462 Main Street<br>Steinbach, MB R5G 1Z5<br><a href="https://maps.google.com/?q=462+Main+Street+Steinbach+MB">Directions</a></p>
-      </div>
-      <div>
-        <h4>Hours</h4>
-        <ul class="hours">
-          <li><span>Mon to Fri</span><span>8:00 to 5:00</span></li>
-          <li><span>Saturday</span><span>8:00 to 4:00</span></li>
-          <li><span>Sunday</span><span>Closed</span></li>
-        </ul>
-        <p class="small" style="margin-top:.9rem">In pain? Call <a href="tel:+12043266494">(204) 326-6494</a>. Same-day care when it can't wait.</p>
-      </div>
-      <div>
-        <h4>Visit</h4>
-        <ul>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="orthodontics.html">Orthodontics</a></li>
-          <li><a href="new-patients.html">New patients</a></li>
-          <li><a href="team.html">Our dentists</a></li>
-          <li><a href="about.html">Our story</a></li>
-          <li><a href="emergency.html">Emergency</a></li>
-          <li><a href="book.html">Book online</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Reach us</h4>
-        <ul>
-          <li><a href="tel:+12043266494">(204) 326-6494</a></li>
-          <li><a href="mailto:info@steinbachdentalclinic.com">info@steinbachdentalclinic.com</a></li>
-          <li>Fax (204) 326-6806</li>
-          <li><a href="https://www.instagram.com/steinbach.dental.clinic/">Instagram</a></li>
-          <li><a href="https://www.facebook.com/SteinbachDentalClinic">Facebook</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="legal">
-      <span>&copy; 2026 Steinbach Dental Clinic. Members of the Manitoba Dental Association and the Canadian Dental Association.</span>
-      <span><a href="https://steinbachdentalclinic.com/privacy-policy/">Privacy policy</a></span>
-    </div>
-  </div>
-</footer>
-</body>
-</html>
+<?php get_footer(); ?>

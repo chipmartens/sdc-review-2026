@@ -7,20 +7,19 @@
 <meta name="description" content="Request a visit online. Pick who's coming and when suits you, we'll confirm by phone or text.">
 <meta name="robots" content="noindex, nofollow">
 <link rel="icon" href="assets/img/icon-160.png" type="image/png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Hanken+Grotesk:wght@400..700&family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/brand.css">
+<link rel="stylesheet" href="assets/fonts/fonts.css">
 <link rel="stylesheet" href="assets/css/site.css">
+<script src="assets/js/alpine-intersect.min.js" defer></script>
+<script src="assets/js/alpine.min.js" defer></script>
 </head>
 <body>
 <a class="sr-only" href="#main">Skip to content</a>
-<header class="topbar">
+<header class="topbar" x-data="{open:false}">
   <div class="wrap">
     <a class="logo" href="index.html" aria-label="Steinbach Dental Clinic home">
       <img class="lockup" src="assets/img/lockup-light.png" alt="Steinbach Dental Clinic" width="220" height="44">
     </a>
-    <nav class="nav" aria-label="Main">
+    <nav class="nav" aria-label="Main" :class="{open:open}">
       <a href="services.html">Services</a>
       <a href="orthodontics.html">Orthodontics</a>
       <a href="new-patients.html">New patients</a>
@@ -31,7 +30,7 @@
     <div class="actions">
       <a class="phone" href="tel:+12043266494">(204) 326-6494</a>
       <a class="btn btn-primary" href="book.html">Book online</a>
-      <button class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+      <button class="menu-btn" x-on:click="open=!open" :aria-expanded="open" x-text="open ? 'Close' : 'Menu'" aria-controls="nav">Menu</button>
     </div>
   </div>
 </header>
@@ -48,11 +47,11 @@
 </section>
 
 <section class="section tight">
-  <div class="wrap cols">
-    <form id="book-form" class="form reveal" novalidate>
+  <div class="wrap cols" x-data="{submitted:false, firstName:'there'}">
+    <form id="book-form" class="form reveal" x-data x-intersect.once="$el.classList.add('in')" novalidate x-show="!submitted" x-on:submit.prevent="firstName = ($refs.name.value.trim().split(' ')[0]) || 'there'; submitted = true; $nextTick(() => $refs.bookOk.scrollIntoView({behavior:'smooth', block:'center'}))">
       <div class="field">
         <label for="name">Your name</label>
-        <input type="text" id="name" name="name" placeholder="First and last name" required>
+        <input type="text" id="name" name="name" x-ref="name" placeholder="First and last name" required>
       </div>
 
       <div class="two">
@@ -130,12 +129,12 @@
       <p class="small">No account needed. We only use these details to book and confirm your visit.</p>
     </form>
 
-    <div id="book-ok" class="notice" hidden>
-      <h3>Thanks, <span data-name>there</span>. We've got it.</h3>
+    <div id="book-ok" class="notice" x-ref="bookOk" x-show="submitted">
+      <h3>Thanks, <span data-name x-text="firstName">there</span>. We've got it.</h3>
       <p>Someone from the desk will call or text to confirm your time. If it's urgent, call <a href="tel:+12043266494">(204) 326-6494</a>.</p>
     </div>
 
-    <div class="reveal">
+    <div class="reveal" x-data x-intersect.once="$el.classList.add('in')">
       <h3>Prefer to call?</h3>
       <p><a class="big-phone" href="tel:+12043266494">(204) 326-6494</a></p>
 
@@ -207,6 +206,5 @@
     </div>
   </div>
 </footer>
-<script src="assets/js/site.js"></script>
 </body>
 </html>

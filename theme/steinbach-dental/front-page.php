@@ -1,53 +1,16 @@
-<!doctype html>
-<html lang="en-CA">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Steinbach Dental Clinic | Family dentist in Steinbach, MB</title>
-<meta name="description" content="Eight dentists, braces, implants and same-day crowns under one roof on Main Street. Open Saturdays. Book online or call (204) 326-6494.">
-<meta name="robots" content="noindex, nofollow">
-<link rel="icon" href="assets/img/icon-160.png" type="image/png">
-<link rel="stylesheet" href="assets/fonts/fonts.css">
-<link rel="stylesheet" href="assets/css/site.css">
-<script src="assets/js/alpine-intersect.min.js" defer></script>
-<script src="assets/js/alpine.min.js" defer></script>
-</head>
-<body>
-<a class="sr-only" href="#main">Skip to content</a>
-<header class="topbar" x-data="{open:false}">
-  <div class="wrap">
-    <a class="logo" href="index.html" aria-label="Steinbach Dental Clinic home">
-      <img class="lockup" src="assets/img/lockup-light.png" alt="Steinbach Dental Clinic" width="220" height="44">
-    </a>
-    <nav class="nav" aria-label="Main" :class="{open:open}">
-      <a href="services.html">Services</a>
-      <a href="orthodontics.html">Orthodontics</a>
-      <a href="new-patients.html">New patients</a>
-      <a href="team.html">Our dentists</a>
-      <a href="about.html">Our story</a>
-      <a href="emergency.html" class="nav-em">Emergency</a>
-    </nav>
-    <div class="actions">
-      <a class="phone" href="tel:+12043266494">(204) 326-6494</a>
-      <a class="btn btn-primary" href="book.html">Book online</a>
-      <button class="menu-btn" x-on:click="open=!open" :aria-expanded="open" x-text="open ? 'Close' : 'Menu'" aria-controls="nav">Menu</button>
-    </div>
-  </div>
-</header>
-
-<main id="main">
+<?php get_header(); ?>
 <section class="hero">
   <div class="wrap grid">
     <div>
       <h1>Everything your family's smile needs. Right here on Main Street.</h1>
       <p class="lead">Eight dentists, braces, implants, and same-day crowns under one roof in Steinbach. Open Saturdays.</p>
       <div class="cta">
-        <a class="btn btn-primary btn-lg" href="book.html">Book online</a>
+        <a class="btn btn-primary btn-lg" href="<?php echo esc_url( home_url( '/book/' ) ); ?>">Book online</a>
         <a class="btn btn-ghost btn-lg" href="tel:+12043266494">Call (204) 326-6494</a>
       </div>
     </div>
     <div class="ring">
-      <img src="assets/img/exterior-2026.jpg" alt="Steinbach Dental Clinic at 462 Main Street" width="1200" height="1200">
+      <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/exterior-2026.jpg" alt="Steinbach Dental Clinic at 462 Main Street" width="1200" height="1200">
       <span class="cap">462 Main Street, Steinbach</span>
     </div>
   </div>
@@ -65,7 +28,7 @@
 <section class="section">
   <div class="wrap split">
     <div class="sticky reveal" x-data x-intersect.once="$el.classList.add('in')">
-      <img src="assets/img/reception.jpg" alt="The front desk at Steinbach Dental Clinic" width="1200" height="1500">
+      <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/reception.jpg" alt="The front desk at Steinbach Dental Clinic" width="1200" height="1500">
     </div>
     <div>
       <h2>One clinic. Every stage of every smile.</h2>
@@ -74,17 +37,17 @@
         <div class="row reveal" x-data x-intersect.once="$el.classList.add('in')">
           <h3>Everything under one roof</h3>
           <p>Braces and aligners, implants, wisdom teeth, dentures, kids' first visits, and a permanent crown in a single appointment. Eight dentists, one file, one address.</p>
-          <a class="link-arrow" href="services.html">See every service</a>
+          <a class="link-arrow" href="<?php echo esc_url( home_url( '/services/' ) ); ?>">See every service</a>
         </div>
         <div class="row reveal" x-data x-intersect.once="$el.classList.add('in')">
           <h3>Seen fast when it hurts</h3>
           <p>With eight dentists, there is usually a chair the same day. Open Saturdays for the things that can't wait for Monday.</p>
-          <a class="link-arrow" href="emergency.html">Emergency care</a>
+          <a class="link-arrow" href="<?php echo esc_url( home_url( '/emergency/' ) ); ?>">Emergency care</a>
         </div>
         <div class="row reveal" x-data x-intersect.once="$el.classList.add('in')">
           <h3>No surprises on the bill</h3>
           <p>Our fees sit at or below the Manitoba Dental Association fee guide, and they're the same whether or not you're insured. We won't recommend a procedure you don't need, and a second opinion is always yours to ask for.</p>
-          <a class="link-arrow" href="new-patients.html#fees">Fees and insurance</a>
+          <a class="link-arrow" href="<?php echo esc_url( home_url( '/new-patients/#fees' ) ); ?>">Fees and insurance</a>
         </div>
       </div>
     </div>
@@ -96,27 +59,27 @@
     <h2>Who are we looking after?</h2>
     <p class="lead">Pick the person. We'll take it from there.</p>
     <div class="bento" style="margin-top:2rem">
-      <a class="cell photo c-3 r-2 reveal" x-data x-intersect.once="$el.classList.add('in')" href="team.html">
-        <img src="assets/img/team-2023.jpg" alt="The Steinbach Dental Clinic team in front of the clinic wall">
+      <a class="cell photo c-3 r-2 reveal" x-data x-intersect.once="$el.classList.add('in')" href="<?php echo esc_url( home_url( '/team/' ) ); ?>">
+        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/team-2023.jpg" alt="The Steinbach Dental Clinic team in front of the clinic wall">
         <div class="over"><h3>The team at 462 Main Street</h3><p>Eight dentists, one born and raised here, trained in Winnipeg, Saskatoon, California, and Nigeria. English and French spoken, plus conversational Spanish.</p></div>
       </a>
-      <a class="cell tint-olive c-3 reveal" x-data x-intersect.once="$el.classList.add('in')" href="services.html#kids">
+      <a class="cell tint-olive c-3 reveal" x-data x-intersect.once="$el.classList.add('in')" href="<?php echo esc_url( home_url( '/services/#kids' ) ); ?>">
         <h3>A child's first visit</h3>
         <p>Short, calm, and over before they've had time to worry. Sealants, fluoride, and a sticker.</p>
       </a>
-      <a class="cell tint-rust c-3 reveal" x-data x-intersect.once="$el.classList.add('in')" href="orthodontics.html">
+      <a class="cell tint-rust c-3 reveal" x-data x-intersect.once="$el.classList.add('in')" href="<?php echo esc_url( home_url( '/orthodontics/' ) ); ?>">
         <h3>A teen who might need braces</h3>
         <p>Braces, Invisalign, SureSmile, and early treatment that can prevent extractions later. No drive to Winnipeg.</p>
       </a>
-      <a class="cell tint-teal c-2 reveal" x-data x-intersect.once="$el.classList.add('in')" href="services.html#adults">
+      <a class="cell tint-teal c-2 reveal" x-data x-intersect.once="$el.classList.add('in')" href="<?php echo esc_url( home_url( '/services/#adults' ) ); ?>">
         <h3>You</h3>
         <p>Cleanings, fillings, a crown in one visit, wisdom teeth, and honest advice.</p>
       </a>
-      <a class="cell tint-paper c-2 reveal" x-data x-intersect.once="$el.classList.add('in')" href="services.html#implants">
+      <a class="cell tint-paper c-2 reveal" x-data x-intersect.once="$el.classList.add('in')" href="<?php echo esc_url( home_url( '/services/#implants' ) ); ?>">
         <h3>A parent who needs dentures or an implant</h3>
         <p>Implants, partial and full dentures, and the surgery to support them, all in-house.</p>
       </a>
-      <a class="cell tint-paper c-2 reveal" x-data x-intersect.once="$el.classList.add('in')" href="emergency.html">
+      <a class="cell tint-paper c-2 reveal" x-data x-intersect.once="$el.classList.add('in')" href="<?php echo esc_url( home_url( '/emergency/' ) ); ?>">
         <h3>Someone in pain right now</h3>
         <p>Call (204) 326-6494. There's usually a chair today.</p>
       </a>
@@ -129,7 +92,7 @@
     <div class="reveal" x-data x-intersect.once="$el.classList.add('in')">
       <h2>A permanent crown in one visit.</h2>
       <p class="lead">No temporary crown, no second appointment, no impression tray. We scan your tooth, design the crown, and mill it here while you wait.</p>
-      <p style="margin-top:1.75rem"><a class="btn btn-ghost" href="services.html#technology">How it works</a></p>
+      <p style="margin-top:1.75rem"><a class="btn btn-ghost" href="<?php echo esc_url( home_url( '/services/#technology' ) ); ?>">How it works</a></p>
     </div>
     <div class="how reveal" x-data x-intersect.once="$el.classList.add('in')">
       <div><b>Scan</b><p>A small camera maps the tooth in a couple of minutes. No putty, no gagging.</p></div>
@@ -145,11 +108,11 @@
     <h2>Seventy-five years in Steinbach.</h2>
     <p class="lead">The clinic your parents went to, rebuilt for your kids. On this Main Street corner since at least 1972, through a fire and a lot of first visits.</p>
     <div class="timeline">
-      <div class="tl reveal" x-data x-intersect.once="$el.classList.add('in')"><img src="assets/img/exterior-1972.jpg" alt="Steinbach Dental Clinic in 1972" width="1200" height="900"><b>1972</b><p>The clinic at 462 Main Street in 1972.</p></div>
-      <div class="tl reveal" x-data x-intersect.once="$el.classList.add('in')"><img src="assets/img/exterior-2012.jpg" alt="Steinbach Dental Clinic in 2012" width="1200" height="900"><b>2012</b><p>The clinic in 2012.</p></div>
-      <div class="tl reveal" x-data x-intersect.once="$el.classList.add('in')"><img src="assets/img/exterior-2026.jpg" alt="Steinbach Dental Clinic today" width="1200" height="900"><b>Today</b><p>Rebuilt after the 2022 fire. Clean-air exchange, 3D imaging, eight dentists.</p></div>
+      <div class="tl reveal" x-data x-intersect.once="$el.classList.add('in')"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/exterior-1972.jpg" alt="Steinbach Dental Clinic in 1972" width="1200" height="900"><b>1972</b><p>The clinic at 462 Main Street in 1972.</p></div>
+      <div class="tl reveal" x-data x-intersect.once="$el.classList.add('in')"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/exterior-2012.jpg" alt="Steinbach Dental Clinic in 2012" width="1200" height="900"><b>2012</b><p>The clinic in 2012.</p></div>
+      <div class="tl reveal" x-data x-intersect.once="$el.classList.add('in')"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/exterior-2026.jpg" alt="Steinbach Dental Clinic today" width="1200" height="900"><b>Today</b><p>Rebuilt after the 2022 fire. Clean-air exchange, 3D imaging, eight dentists.</p></div>
     </div>
-    <p style="margin-top:2rem"><a class="link-arrow" href="about.html">Read our story</a></p>
+    <p style="margin-top:2rem"><a class="link-arrow" href="<?php echo esc_url( home_url( '/about/' ) ); ?>">Read our story</a></p>
   </div>
 </section>
 
@@ -193,7 +156,7 @@
       <div class="step reveal" x-data x-intersect.once="$el.classList.add('in')"><h3>A proper first look</h3><p>Digital x-rays, a full exam, and a cleaning. We'll show you what we see on the screen and answer every question.</p></div>
       <div class="step reveal" x-data x-intersect.once="$el.classList.add('in')"><h3>A plan you understand</h3><p>What needs doing now, what can wait, and what it costs before you commit. Insurance forms handled at the desk.</p></div>
     </div>
-    <p style="margin-top:2rem"><a class="btn btn-primary" href="new-patients.html">Everything for new patients</a></p>
+    <p style="margin-top:2rem"><a class="btn btn-primary" href="<?php echo esc_url( home_url( '/new-patients/' ) ); ?>">Everything for new patients</a></p>
   </div>
 </section>
 
@@ -201,61 +164,10 @@
   <div class="wrap grid">
     <h2>Ready when you are. Saturdays too.</h2>
     <div class="cta" style="display:flex;gap:.9rem;flex-wrap:wrap">
-      <a class="btn btn-primary btn-lg" href="book.html">Book online</a>
+      <a class="btn btn-primary btn-lg" href="<?php echo esc_url( home_url( '/book/' ) ); ?>">Book online</a>
       <a class="btn btn-ghost btn-lg" href="tel:+12043266494">Call (204) 326-6494</a>
     </div>
   </div>
 </section>
 
-</main>
-
-<footer class="footer">
-  <div class="wrap">
-    <div class="grid">
-      <div>
-        <a class="logo" href="index.html" aria-label="Steinbach Dental Clinic home">
-          <img class="lockup" src="assets/img/lockup-dark.png" alt="Steinbach Dental Clinic" width="220" height="44">
-        </a>
-        <p class="tag">Every smile has a story. We're here for yours.</p>
-        <p class="small">462 Main Street<br>Steinbach, MB R5G 1Z5<br><a href="https://maps.google.com/?q=462+Main+Street+Steinbach+MB">Directions</a></p>
-      </div>
-      <div>
-        <h4>Hours</h4>
-        <ul class="hours">
-          <li><span>Mon to Fri</span><span>8:00 to 5:00</span></li>
-          <li><span>Saturday</span><span>8:00 to 4:00</span></li>
-          <li><span>Sunday</span><span>Closed</span></li>
-        </ul>
-        <p class="small" style="margin-top:.9rem">In pain? Call <a href="tel:+12043266494">(204) 326-6494</a>. Same-day care when it can't wait.</p>
-      </div>
-      <div>
-        <h4>Visit</h4>
-        <ul>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="orthodontics.html">Orthodontics</a></li>
-          <li><a href="new-patients.html">New patients</a></li>
-          <li><a href="team.html">Our dentists</a></li>
-          <li><a href="about.html">Our story</a></li>
-          <li><a href="emergency.html">Emergency</a></li>
-          <li><a href="book.html">Book online</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Reach us</h4>
-        <ul>
-          <li><a href="tel:+12043266494">(204) 326-6494</a></li>
-          <li><a href="mailto:info@steinbachdentalclinic.com">info@steinbachdentalclinic.com</a></li>
-          <li>Fax (204) 326-6806</li>
-          <li><a href="https://www.instagram.com/steinbach.dental.clinic/">Instagram</a></li>
-          <li><a href="https://www.facebook.com/SteinbachDentalClinic">Facebook</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="legal">
-      <span>&copy; 2026 Steinbach Dental Clinic. Members of the Manitoba Dental Association and the Canadian Dental Association.</span>
-      <span><a href="https://steinbachdentalclinic.com/privacy-policy/">Privacy policy</a></span>
-    </div>
-  </div>
-</footer>
-</body>
-</html>
+<?php get_footer(); ?>
